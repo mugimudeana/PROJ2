@@ -35,18 +35,23 @@ namespace PROJECT1.Controllers
                 Session["username"] = account.UserEmail;
                 FormsAuthentication.SetAuthCookie(account.UserEmail.ToString(), rememberMe);
 
-                return RedirectToAction("Loggedin", new { account.FirstName, account.LastName });
+                return RedirectToAction("Loggedin");
 
             }
             return View();
 
         }
 
-        public ActionResult Loggedin (string FirstName, String LastName)
+        public ActionResult Loggedin()
+        {
+            return View();
+        }
+
+        /*public ActionResult Loggedin (string FirstName, String LastName)
         {
             ViewBag.Message = FirstName + " " + LastName + " successfully registered. ";
             return View();
-        }
+        }*/
         
         public ActionResult Index()
         {
