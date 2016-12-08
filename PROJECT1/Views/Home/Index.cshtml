@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+
+
+<link href="~/Content/myStyle.css" rel="stylesheet" />
+
+
+
+<nav class="breadcrumb">
+    <a class="breadcrumb-item active" href="/Home/Index">Home</a>  
+</nav>
+
+<h2>@ViewBag.Title</h2>
+
+<div class="jumbotron">
+    <h2>FUTURE MISSIONARY WORLD!</h2>
+    <p class="lead">Trying to get ready for your mission, 
+     or deciding whether you want to go. You've come to the right place</p>
+  
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>MISSION INFORMATION</h2>
+        <p>
+         Ready to serve the Lord! 
+            <a href="/Home/Missions">
+                <img class="img-responsive" src="~/Content/Images/tags.png" />
+            </a>
+        </p>
+       
+    </div>
+    
+
+    <div class="col-md-4">
+        <h2>ABOUT US</h2>
+        <p>
+            Wondering how useful we are? Get to know us! 
+
+            <a href="/Home/About">
+                <img class="img-responsive" src="~/Content/Images/about-us.png" />
+            </a>
+        </p>
+        
+    </div>
+
+
+    <div class="col-md-4">
+        <h2>CONTACT US</h2>
+        <p>
+            Want to get a hold of us?
+            <a href="/Home/Contact">
+                <img class="img-responsive" src="~/Content/Images/contactUs.jpg" />
+            </a>
+        </p>
+      
+    </div>
+</div>

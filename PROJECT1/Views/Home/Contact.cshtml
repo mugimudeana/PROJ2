@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+<link href="~/Content/myStyle.css" rel="stylesheet" />
+
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<h2>Contact Us</h2>
+
+<nav class="breadcrumb">
+    <a class="breadcrumb-item" href="/Home/Index">Home /</a>
+    <a class="breadcrumb-item " href="/Home/Missions"> Missions /</a>
+    <a class="breadcrumb-item " href="/Home/About"> About Us /</a>
+    <a class="breadcrumb-item active" href="/Home/Contact"> Contact Info</a>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-12">
+
+                      <div class="form-wrapper">
+                            <form class="ddfm" method="post" action="/Home/Contact" enctype="multipart/form-data" _lpchecked="1">
+
+                              
+                                <p class="fieldwrap"><label for="fm_name" class="disp"><span class="required">*</span> Name</label><input class="fmtext" type="text" name="fm_name" id="fm_name" value="" placeholder="Name"></p>
+
+                                <p class="fieldwrap"><label for="fm_email" class="disp"><span class="required">*</span> Email</label><input class="fmtext" type="text" name="fm_email" id="fm_email" value="" placeholder="Email Address"></p>
+
+                                <p class="fieldwrap">
+                                    <label class="disp"><span class="required">*</span> Subject</label><div class="ff-only">
+                                        <select class="" code="" id="fm_subject" name="fm_subject">
+                                            <option>Choose A Subject &hellip;</option>
+                                            <option>Travel expenses</option>
+                                            <option>Mission finances</option>
+                                            <option>Things I need to buy</option>
+                                            <option>Best practices</option>
+                                            <option>Health concerns</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </p>
+               
+                                    <p class="fieldwrap">
+                                        <label for="fm_message" class="disp"><span class="required">*</span> Message</label>
+                                        <textarea class="fmtextarea" name="fm_message" cols="20" rows="6" id="fm_message" placeholder="Your Message Goes Here&hellip;"></textarea>
+                                    </p>
+
+                                   
+                        <p class="fieldwrap"><div class="submit"><input type="submit" name="form_submitted" value="Send Email"></div></p>
+
+                         </form>
+
+                      </div>
+               </div>
+         </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <address>
+                Missionary Guide<br />
+                Salt Lake City, UT 84601<br />
+                <abbr title="Phone">P:</abbr>
+                801-887-9087
+            </address>
+
+            <address>
+                <strong>Support:</strong>   <a href="mailto:Support@example.com">SupportMissionaries@gmail.com</a><br />
+            </address>
+        </div>
+    </div>

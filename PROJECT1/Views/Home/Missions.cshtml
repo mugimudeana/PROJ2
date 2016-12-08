@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Missions";
+   
+}
+<link href="~/Content/myStyle.css" rel="stylesheet" />
+
+
+<h2>@ViewBag.Title</h2>
+
+<nav class="breadcrumb">
+    <a class="breadcrumb-item" href="/Home/Index">Home /</a>
+    <a class="breadcrumb-item active" href="/Home/Missions"> Missions</a>
+    
+</nav>
+
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+<link href="~/Content/Site.css" rel="stylesheet" />
+<script src="~/Scripts/ExtraDesign.js"></script>
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <dropdown>
+                <input id="toggle1" type="checkbox" checked>
+                <label for="toggle1" class="animate">MENU<i class="fa fa-bars float-right"></i></label>
+                <ul class="animate">
+
+                    <a href="MissionFAQ?name=1">
+                        <li class="animate">France Paris Mission<i class="float-right"></i></li>
+                    </a>
+
+                    <a href="MissionFAQ?name=2">
+                        <li class="animate">Brazil São Paulo West Mission<i class="float-right"></i></li>
+                    </a>
+
+                    <a href="MissionFAQ?name=3">
+                        <li class="animate">Florida Tampa Mission<i class="float-right"></i></li>
+                    </a>
+
+                </p>
+            </dropdown>
+
+        </div>
+        <div class="col-md-6">
+
+            <img src="/Content/Images/globe.jpg" class="img-responsive">
+
+        </div>
+
+    </div>
+
+ 
+</div>
+
+<script src="~/Scripts/ExtraDesign.js"></script>

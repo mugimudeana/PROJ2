@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<h2>Login</h2>
+
+<link href="~/Content/Better.css" rel="stylesheet" />
+
+<div class="container">
+
+
+    <!--created new view for personalizing login-->
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+        <div class="row">
+            <label for="inputEmail">Email address</label>
+            @Html.TextBox("Email address")
+
+        </div>
+        <br />
+        <br />
+    <div class="row">
+        <label for="inputPassword">Password</label>
+        @Html.Password("Password")
+
+    </div>
+        <button type="submit">Login</button>
+        <br />
+    <p>
+        @Html.ActionLink("Register as a new user", "Register","Home")
+    </p>
+
+    }
+
+
+</div>
