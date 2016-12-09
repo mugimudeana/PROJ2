@@ -29,5 +29,7 @@ namespace PROJECT1.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<PROJECT1.Models.MissionQuestions> MissionQuestions { get; set; }
     }
 }

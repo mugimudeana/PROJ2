@@ -35,7 +35,7 @@ namespace PROJECT1.Controllers
                 Session["username"] = account.UserEmail;
                 FormsAuthentication.SetAuthCookie(account.UserEmail.ToString(), rememberMe);
 
-                return RedirectToAction("MissionFAQ");
+                return RedirectToAction("Missions");
 
             }
             return View();
@@ -76,6 +76,52 @@ namespace PROJECT1.Controllers
             return View();
         }
 
+        //CREATE METHOD TO CHECK DATABASE FOR STORED USER INFO ------------------------------------------------
+
+        [HttpPost]
+        public ActionResult Login(Users account, FormCollection form, int? id, bool rememberMe = false)
+        {
+            Session["mission"] = id;
+            //Session["userID"] = userid;
+
+            using (MissionSiteContext db = new MissionSiteContext())
+            {
+                //var usr = db.user.Single(u => u.userEmail = account.userEmail && u.uPassword == account.uPassword).FirstOrDefault;
+                var usr = db.User.Where(u => u.UserEmail == account.UserEmail && u.Password == account.Password).FirstOrDefault();
+                if (usr != null)
+                {
+                    Session["UserID"] = usr.UserID.ToString();
+                    Session["username"] = usr.UserEmail.ToString();
+                    FormsAuthentication.SetAuthCookie(usr.UserEmail, rememberMe);
+                    return RedirectToAction("Missions", "Home", new { id = Session["mission"], userid = Session["UserID"] });
+                    // return RedirectToAction("Index", "MissionQuestions", new { id = Session["mission"] });
+
+                }
+                else
+                     {
+                    ModelState.AddModelError(" ", "Username or password is wrong. ");
+                    // return RedirectToAction("Index");
+                }
+
+
+            }
+            return View();
+
+
+        }
+
+        //CREATE METHOD FOR SUBMITTING QUESTIONS-----------------------------------------------------------------------
+        public ActionResult AddQuestion ()
+        {
+            return View();
+        }
+
+        //CREATE METHOD FOR SUBMITTING QUESTIONS ----------------------------------------------------------------------
+
+        public ActionResult EditQuestion ()
+        {
+            return View(); 
+        }
         //CREATE METHOD FOR LOGIN THAT WILL RECEIVE PARAMETERS --------------------------------------------------------
 
 

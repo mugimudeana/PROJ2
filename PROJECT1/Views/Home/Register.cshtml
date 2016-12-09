@@ -1,7 +1,9 @@
 ﻿@model PROJECT1.Models.Users
 
+<link href="~/Content/myStyle.css" rel="stylesheet" />
+
 @using (Html.BeginForm("Register","Home",FormMethod.Post)) 
-{
+{//
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
@@ -47,7 +49,7 @@
         </div>
     </div>
 }
-
+<br />
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to Missions", "Missions","Home")
 </div>
