@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace PROJECT1.Models
 {
@@ -13,23 +14,22 @@ namespace PROJECT1.Models
     public class MissionQuestions
     {
         [Key]
-        [DisplayName("Mission Question")]
+        
         public int MissionQuestionID { get; set; }
+        [DisplayName("Mission Question")]
+        
 
-        [DisplayName("Mission ID")]
-        [Required(ErrorMessage = "Please enter MissionID")]
+       
         public int MissionID { get; set; }
-
         [DisplayName("User")]
-        [Required(ErrorMessage = "Please enter UserID")]
+
+       
         public int UserID { get; set; }
 
         [DisplayName("Question")]
-        [Required(ErrorMessage = "Please enter question")]
         public string Question { get; set; }
 
         [DisplayName("Answer")]
-        [Required(ErrorMessage = "Please enter answer")]
         public string Answer { get; set; }
 
 

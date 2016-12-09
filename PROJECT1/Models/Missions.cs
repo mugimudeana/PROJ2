@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace PROJECT1.Models
 {
@@ -13,31 +14,34 @@ namespace PROJECT1.Models
     public class Missions
     {
         [Key]
-        [DisplayName("Mission ID")]
+        [HiddenInput(DisplayValue = false)]
         public int MissionID { get; set; }
 
+         [HiddenInput(DisplayValue = false)]
         [DisplayName("Mission Name")]
-        [Required(ErrorMessage = "Please enter Mission Name")]
         public string MissionName { get; set; }
 
+         [HiddenInput(DisplayValue = false)]
         [DisplayName("President Name")]
-        [Required(ErrorMessage = "Please enter President Name")]
         public string PresidentName { get; set; }
 
+         [HiddenInput(DisplayValue = false)]
         [DisplayName("Mission Address")]
-        [Required(ErrorMessage = "Please enter Mission Address")]
         public string MissionAddress { get; set; }
 
+        [HiddenInput(DisplayValue = false)]
         [DisplayName("Language")]
-        [Required(ErrorMessage = "Please enter Language")]
         public string Language { get; set; }
 
+         [HiddenInput(DisplayValue = false)]
         [DisplayName("Climate")]
         public string Climate { get; set; }
 
+         [HiddenInput(DisplayValue = false)]
         [DisplayName("Dominant Religion")]
         public string DominantReligion { get; set; }
 
+         [HiddenInput(DisplayValue = false)]
         [DisplayName("Flag")]
         public string Flag { get; set; }
 

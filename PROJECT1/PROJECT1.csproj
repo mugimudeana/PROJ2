@@ -173,6 +173,8 @@
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\MissionQuestions1Controller.cs" />
+    <Compile Include="Views\MissionQuestionsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Better.css" />
@@ -258,6 +260,11 @@
     <Content Include="Views\Home\Loggedin.cshtml" />
     <Content Include="Views\Home\AddQuestion.cshtml" />
     <Content Include="Views\Home\DisplayQuestions.cshtml" />
+    <Content Include="Views\MissionQuestions1\Create.cshtml" />
+    <Content Include="Views\MissionQuestions1\Delete.cshtml" />
+    <Content Include="Views\MissionQuestions1\Details.cshtml" />
+    <Content Include="Views\MissionQuestions1\Edit.cshtml" />
+    <Content Include="Views\MissionQuestions1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

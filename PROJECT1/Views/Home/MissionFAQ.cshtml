@@ -87,12 +87,7 @@
         <!--Button to Add Question view----------------------------------------------------------------------------------------------->
         <div class="container">
          
-            
-            <a href="/Home/DisplayQuestions">
-                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#ask">
-                    Frequently Asked Questions
-                </button>
-            </a>
+          @Html.ActionLink("Frequently Asked Questions", "DisplayQuestions", "Home", new { id = ViewBag.missionID }, null)
 
         </div>
 

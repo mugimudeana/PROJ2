@@ -124,12 +124,14 @@ namespace PROJECT1.Controllers
         {
             return View(); 
         }
+        
+        
 
         public ActionResult DisplayQuestions(int? id)
         {
             Session["mission"] = id;
             ViewBag.mission = Session["mission"];
-            IEnumerable<Missions> nihao = db.Database.SqlQuery<Missions>("SELECT * FROM Missions WHERE MissionID =  " + id);
+            IEnumerable<MissionQuestions> nihao = db.Database.SqlQuery<MissionQuestions>("SELECT * FROM MissionQuestions WHERE MissionID =  " + id);
             //Where Missions.missionID = " + id
 
             return View(nihao);
@@ -166,8 +168,9 @@ namespace PROJECT1.Controllers
 
 // created a method to be used to display data for the different missions when specific mission is displayed 
        [Authorize]
-        public ActionResult MissionFAQ(int name = 0)
+        public ActionResult MissionFAQ(int? name)
         {
+            ViewBag.missionID = name;
 
             if (name == 1)
             {

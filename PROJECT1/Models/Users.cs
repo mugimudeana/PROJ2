@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace PROJECT1.Models
 {
@@ -12,24 +13,25 @@ namespace PROJECT1.Models
 
     public class Users
     {
-        [Key]
+       [Key]
+       [HiddenInput(DisplayValue = false)]
         [DisplayName("UserID")]
         public int UserID { get; set; }
 
+   
         [DisplayName("Email")]
-        [Required(ErrorMessage = "Please enter Email")]
         public string UserEmail { get; set; }
 
+    
         [DisplayName("Password")]
-        [Required(ErrorMessage = "Please enter Password")]
         public string Password { get; set; }
 
+ 
         [DisplayName("First Name")]
-        [Required(ErrorMessage = "Please enter First Name")]
         public string FirstName { get; set; }
 
+ 
         [DisplayName("Last Name")]
-        [Required(ErrorMessage = "Please enter Last Name")]
         public string LastName { get; set; }
 
     }
