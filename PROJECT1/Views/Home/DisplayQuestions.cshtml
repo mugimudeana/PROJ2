@@ -1,0 +1,76 @@
+﻿@model IEnumerable<PROJECT1.Models.MissionQuestions>
+
+@{
+    ViewBag.Title = "DisplayQuestions";
+}
+
+<h2>DisplayQuestions</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddQuestion", "Home")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MissionID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissionID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Answer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MissionQuestionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MissionQuestionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MissionQuestionID })
+        </td>
+    </tr>
+}
+
+</table>
+@{
+    int valor = ViewBag.mission;
+
+    foreach (var item in Model.Where(m => m.MissionID == valor))
+    {
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">@Html.DisplayFor(modelItem => item.Question)</h3>
+
+            </div>
+
+            <div class="panel-body">
+                @Html.DisplayFor(modelItem => item.Answer) <br />
+
+            </div>
+        </div>
+
+        break;
+
+    }
+
+}
+

@@ -18,11 +18,11 @@ namespace PROJECT1.Models
 
         [DisplayName("Mission ID")]
         [Required(ErrorMessage = "Please enter MissionID")]
-        public string MissionID { get; set; }
+        public int MissionID { get; set; }
 
         [DisplayName("User")]
         [Required(ErrorMessage = "Please enter UserID")]
-        public string UserID { get; set; }
+        public int UserID { get; set; }
 
         [DisplayName("Question")]
         [Required(ErrorMessage = "Please enter question")]

@@ -216,4 +216,3 @@ C:\Users\Deana Mugimu\Documents\GitHub\PROJ2\PROJECT1\bin\Microsoft.Owin.Securit
 C:\Users\Deana Mugimu\Documents\GitHub\PROJ2\PROJECT1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Deana Mugimu\Documents\GitHub\PROJ2\PROJECT1\obj\Debug\PROJECT1.dll
 C:\Users\Deana Mugimu\Documents\GitHub\PROJ2\PROJECT1\obj\Debug\PROJECT1.pdb
-C:\Users\Deana Mugimu\Documents\GitHub\PROJ2\PROJECT1\obj\Debug\PROJECT1.csprojResolveAssemblyReference.cache

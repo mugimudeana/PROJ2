@@ -257,6 +257,7 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\Loggedin.cshtml" />
     <Content Include="Views\Home\AddQuestion.cshtml" />
+    <Content Include="Views\Home\DisplayQuestions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

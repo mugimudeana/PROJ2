@@ -111,7 +111,9 @@ namespace PROJECT1.Controllers
         }
 
         //CREATE METHOD FOR SUBMITTING QUESTIONS-----------------------------------------------------------------------
-        public ActionResult AddQuestion ()
+      
+
+        public ActionResult AddQuestion()
         {
             return View();
         }
@@ -121,6 +123,16 @@ namespace PROJECT1.Controllers
         public ActionResult EditQuestion ()
         {
             return View(); 
+        }
+
+        public ActionResult DisplayQuestions(int? id)
+        {
+            Session["mission"] = id;
+            ViewBag.mission = Session["mission"];
+            IEnumerable<Missions> nihao = db.Database.SqlQuery<Missions>("SELECT * FROM Missions WHERE MissionID =  " + id);
+            //Where Missions.missionID = " + id
+
+            return View(nihao);
         }
         //CREATE METHOD FOR LOGIN THAT WILL RECEIVE PARAMETERS --------------------------------------------------------
 
