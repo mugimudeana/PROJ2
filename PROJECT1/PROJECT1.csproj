@@ -161,6 +161,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MissionQuestionsController.cs" />
+    <Compile Include="Controllers\MissionsController.cs" />
     <Compile Include="DAL\MissionSiteContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -259,12 +261,16 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\Loggedin.cshtml" />
     <Content Include="Views\Home\AddQuestion.cshtml" />
-    <Content Include="Views\Home\DisplayQuestions.cshtml" />
-    <Content Include="Views\MissionQuestions1\Create.cshtml" />
-    <Content Include="Views\MissionQuestions1\Delete.cshtml" />
-    <Content Include="Views\MissionQuestions1\Details.cshtml" />
-    <Content Include="Views\MissionQuestions1\Edit.cshtml" />
-    <Content Include="Views\MissionQuestions1\Index.cshtml" />
+    <Content Include="Views\MissionQuestions\Create.cshtml" />
+    <Content Include="Views\MissionQuestions\Delete.cshtml" />
+    <Content Include="Views\MissionQuestions\Details.cshtml" />
+    <Content Include="Views\MissionQuestions\Edit.cshtml" />
+    <Content Include="Views\MissionQuestions\Index.cshtml" />
+    <Content Include="Views\Missions\Create.cshtml" />
+    <Content Include="Views\Missions\Delete.cshtml" />
+    <Content Include="Views\Missions\Details.cshtml" />
+    <Content Include="Views\Missions\Edit.cshtml" />
+    <Content Include="Views\Missions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

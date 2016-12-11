@@ -127,7 +127,7 @@ namespace PROJECT1.Controllers
         
         
 
-        public ActionResult DisplayQuestions(int? id)
+       /* public ActionResult DisplayQuestions(int? id)
         {
             Session["mission"] = id;
             ViewBag.mission = Session["mission"];
@@ -135,7 +135,8 @@ namespace PROJECT1.Controllers
             //Where Missions.missionID = " + id
 
             return View(nihao);
-        }
+        }*/
+
         //CREATE METHOD FOR LOGIN THAT WILL RECEIVE PARAMETERS --------------------------------------------------------
 
 

@@ -1,4 +1,5 @@
-﻿
+﻿@model PROJECT1.Models.Missions
+
 @{
     ViewBag.Title = "MissionFAQ";
   
@@ -8,7 +9,7 @@
 
 <script src="~/Scripts/ExtraDesign.js"></script>
 <link href="~/Content/myStyle.css" rel="stylesheet" />
-
+<a href="~/Views/Home/MissionFAQ.cshtml">~/Views/Home/MissionFAQ.cshtml</a>
 <h2>Mission FAQ</h2>
 <nav class="breadcrumb">
     <a class="breadcrumb-item" href="/Home/Index">Home /</a>
@@ -21,11 +22,11 @@
     <div class="row">
 
         <div class="col-md-6">
-                    <h3>@ViewBag.Name</h3>
+                    <h3>@Model.MissionName</h3>
                     <p></p>
 
                     <div class="container">
-                        <img class="img-responsive" src="@ViewBag.Flag" />
+                        <img class="img-responsive" src="@Model.Flag" />
 
                     </div>
 
